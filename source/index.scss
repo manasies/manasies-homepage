@@ -1,3 +1,5 @@
+@import "/assets/fonts/stylesheet.css";
+
 @mixin animate($animation,$duration,$method,$times){
     animation: $animation $duration $method $times;
 }
@@ -8,23 +10,175 @@
     }
 }
 
-canvas {}
-
-body {
-    font-family: 'Roboto';
-    margin: 0;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.rainbowText {
-    @include keyframes(rainbow) {
-        0% { color: #9400D3 }
-        20% { color: #4B0082 }
-        40% { color: #0000FF }
-        60% { color: #00FF00 }
-        80% { color: #FFFF00 }
-        90% { color: #FF7F00 }
-        100% { color: #FF0000 }
+main {
+    flex-grow: 1;
+    width: 100vw;
+    color: black;
+    z-index: 99;
+    // position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    padding: 120px 0px;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing);
+}
+
+section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+}
+
+.left {
+    grid-column: 6 / 12;
+}
+
+.headingtext {
+    font-family: 'rooters';
+    font-size: 56px;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill: none;
+}
+
+.headline {
+    height: var(--headline-height);
+    display: flex;
+    align-items: center;
+    border-left: 0px;
+    border-bottom: 7px solid var(--black);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    
+    .sliding-headline {
+        white-space: nowrap;
+        animation: slideLeft 40s infinite linear;
+        margin-top: -32px;
+        
+        span {
+            margin-right: .1em;
+        }
+        
+        span:nth-child(2n) {
+            color: var(--black);
+        }
+        
+        span:nth-child(2n+1) {
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: var(--black);
+        }
     }
-    @include animate(rainbow, 2s, linear, infinite);
-    font-size: 48px;
 }
+
+.subline {
+    height: var(--subline-height);
+    display: flex;
+    align-items: center;
+    
+    border-bottom: 7px solid var(--black);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    
+    
+    .sliding-headline {
+        white-space: nowrap;
+        animation: slideLeft 40s infinite linear reverse;
+        
+        margin-top: -7px;
+        
+        span {
+            margin-right: 0.1em;
+        }
+        
+        span:nth-child(2n) {
+            color: var(--black);
+        }
+        
+        span:nth-child(2n+1) {
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: var(--black);
+        }
+    }
+}
+
+.container {
+    position: absolute;
+    width: calc(100vw - 2 * var(--border-distance-w));
+    height: calc(100vh - 2 * var(--border-distance-w));
+    left: var(--border-distance-w);
+    top: var(--border-distance-w);
+    
+    border: 7px solid var(--black);
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+#loader-bg {
+    background-color: #EEEEEE;
+    z-index: 1500;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-gif {
+    max-width:10%;
+    max-height:10%;
+}
+
+//   blockquote {
+    //     margin: 0;
+    //     padding: 0;
+    //     grid-column: 2 / span 9;
+    //     margin-bottom: var(--spacing);
+    // }
+    
+    // blockquote p {
+        //     color: black;
+        //     background-color: white;
+        //     font-size: 4rem;
+        //     display: inline;
+        //     line-height: 1;
+        // }

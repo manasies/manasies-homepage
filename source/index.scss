@@ -15,6 +15,10 @@ html, body {
     overflow-x: hidden;
 }
 
+#bg {
+    z-index: -999;
+}
+
 main {
     flex-grow: 1;
     width: 100vw;
@@ -101,8 +105,7 @@ section {
     border-bottom: 7px solid var(--black);
     flex-wrap: nowrap;
     white-space: nowrap;
-    overflow: hidden;
-    
+    // overflow: hidden;
     
     
     .sliding-headline {
@@ -167,18 +170,3 @@ section {
     max-width:10%;
     max-height:10%;
 }
-
-//   blockquote {
-    //     margin: 0;
-    //     padding: 0;
-    //     grid-column: 2 / span 9;
-    //     margin-bottom: var(--spacing);
-    // }
-    
-    // blockquote p {
-        //     color: black;
-        //     background-color: white;
-        //     font-size: 4rem;
-        //     display: inline;
-        //     line-height: 1;
-        // }

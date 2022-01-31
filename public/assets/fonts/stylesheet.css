@@ -3,6 +3,18 @@
 
 
 @font-face {
+    font-family: 'evildead';
+    src: url('evildead-webfont.woff2') format('woff2'),
+         url('evildead-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
     font-family: 'rooters';
     src: url('rooters-webfont.woff2') format('woff2'),
          url('rooters-webfont.woff') format('woff');

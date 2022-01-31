@@ -4,6 +4,10 @@ html, body {
   overflow-x: hidden;
 }
 
+#bg {
+  z-index: -999;
+}
+
 main {
   flex-grow: 1;
   width: 100vw;
@@ -83,7 +87,6 @@ section {
   border-bottom: 7px solid var(--black);
   flex-wrap: nowrap;
   white-space: nowrap;
-  overflow: hidden;
 }
 .subline .sliding-headline {
   white-space: nowrap;

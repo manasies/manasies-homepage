@@ -59,7 +59,7 @@ function initScene() {
     var irradiance = loadCubeMap("assets/skybox/irradiance");
     
     var torusGeom = new THREE.TorusKnotGeometry(10, 3, 100, 16);
-    iridescenceMaterial = new IridescentMaterial(irradiance, radiance, iridescenceLookUp, 6);
+    iridescenceMaterial = new IridescentMaterial(irradiance, radiance, iridescenceLookUp, 8);
     torus = new THREE.Mesh(torusGeom, iridescenceMaterial);
     torus.position.z = -55;
     scene.add(torus);

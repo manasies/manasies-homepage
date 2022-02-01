@@ -142,6 +142,11 @@ section {
     flex-direction: column;
 }
 
+.whoami {
+    z-index: 50;
+    position: fixed;
+}
+
 @keyframes slideLeft {
     0% {
         transform: translate3d(0, 0, 0);
@@ -169,4 +174,18 @@ section {
 #loading-gif {
     max-width:10%;
     max-height:10%;
+}
+
+#arrowdiv {
+    width: 100%;
+    position:fixed;
+    top:100vh;
+    transform:translateY(-100%);
+    z-index: 99999;
+    text-align: center;
+}   
+
+#botarrow {
+    max-width: 3%;
+    max-height: 3%;
 }

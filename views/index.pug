@@ -19,7 +19,7 @@ head(lang='en')
   img#loading-gif(src='assets/img/loading.gif')
 #bg
 main
-  .container.headingtext
+  .slidingTitleContainer.headingtext
     .headline
       .sliding-headline
         span MATTEOBERNARDI
@@ -55,11 +55,19 @@ main
         span designer UI/UX
         span designer UI/UX
     #arrowdiv
-        img#botarrow(style='z-index: 999;' src='assets/img/arrow-down.png')
+      #arrowtext Please scroll down ...
+      img#botarrow(style='z-index: 999;' src='assets/img/arrow-down.png')
 
-.whoami
-- for ( i=1; i <= 4 ; i++ )
-  div( id="div" + i ) WHO AM I 
+.subTitleDiv.subtitleText My Hobbies
+
+.leagueStatsWrapper
+  div
+    div WHO AM I 
+    div= leaguesumm.name
+    div= leaguesumm.tier
+    div= leaguesumm.rank
+    img(src=leaguesumm.profileIconId)
+
 script.
     setTimeout(
         function() {

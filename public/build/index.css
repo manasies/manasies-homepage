@@ -15,7 +15,6 @@ main {
   z-index: 99;
   width: 100%;
   margin: 0px auto;
-  padding: 120px 0px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -66,7 +65,6 @@ section {
 .headline .sliding-headline {
   white-space: nowrap;
   animation: slideLeft 40s infinite linear;
-  margin-top: -32px;
 }
 .headline .sliding-headline span {
   margin-right: 0.1em;
@@ -105,7 +103,7 @@ section {
   -webkit-text-stroke-color: var(--black);
 }
 
-.container {
+.slidingTitleContainer {
   position: absolute;
   width: calc(100vw - 2 * var(--border-distance-w));
   height: calc(100vh - 2 * var(--border-distance-w));
@@ -114,11 +112,6 @@ section {
   border: 7px solid var(--black);
   display: flex;
   flex-direction: column;
-}
-
-.whoami {
-  z-index: 50;
-  position: fixed;
 }
 
 @keyframes slideLeft {
@@ -153,13 +146,111 @@ section {
   position: fixed;
   top: 100vh;
   transform: translateY(-100%);
-  z-index: 99999;
+  z-index: 100;
   text-align: center;
+}
+
+#arrowtext {
+  font-size: 12px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: -2vh;
 }
 
 #botarrow {
   max-width: 3%;
   max-height: 3%;
+}
+
+.leagueStatsWrapper {
+  z-index: 50;
+  position: relative;
+  box-shadow: inset 0 0 2000px rgba(59, 59, 59, 0.3);
+  backdrop-filter: blur(7px);
+  margin-left: 60vw;
+  margin-right: 10vw;
+  margin-top: 10vh;
+}
+
+.subtitleDiv {
+  position: relative;
+  margin-left: 10vw;
+}
+
+.subtitleText {
+  position: relative;
+  margin-top: 100vh;
+  margin-left: 5vw;
+  font-family: "rooters";
+  font-size: 72px;
+  color: #fff;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke-width: 1.5px;
+  animation: appear 2s linear infinite;
+}
+@keyframes appear {
+  0% {
+    text-shadow: none;
+  }
+  5% {
+    text-shadow: 4px 4px #fbf8cc;
+  }
+  10% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf;
+  }
+  15% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2;
+  }
+  20% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8;
+  }
+  25% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0;
+  }
+  30% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3;
+  }
+  35% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4;
+  }
+  40% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5;
+  }
+  45% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5, 36px 36px #98f5e1;
+  }
+  50% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5, 36px 36px #98f5e1;
+  }
+  55% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5, 36px 36px #98f5e1;
+  }
+  60% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5;
+  }
+  65% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4;
+  }
+  70% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3;
+  }
+  75% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0;
+  }
+  80% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8;
+  }
+  85% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2;
+  }
+  90% {
+    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf;
+  }
+  95% {
+    text-shadow: 4px 4px #fbf8cc;
+  }
+  100% {
+    text-shadow: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

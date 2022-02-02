@@ -6,6 +6,8 @@ let bodyParser = require('body-parser');
 let api = TeemoJS('RGAPI-b66091d5-a5d0-4068-a478-a20bb3bd1646');
 const SUMMONER_NAME = 'DlGlTALOVA';
 let summoner = {
+    "name": SUMMONER_NAME,
+    "profileIconId": '',
     "rank": '',
     "tier": '',
     "leaguePoints": '',
@@ -23,7 +25,10 @@ app.set('views', path.join(__dirname, 'views'));
 
 async function leagueData() {
     data = await api.get('euw1', 'summoner.getBySummonerName', SUMMONER_NAME);
+    if (data)
+        summoner.profileIconId = 'http://ddragon.leagueoflegends.com/cdn/12.3.1/img/profileicon/' + data.profileIconId + '.png';
     let summonerId = data.id;
+    console.log(data);
     accdata = await api.get('euw1', 'league.getLeagueEntriesForSummoner', summonerId);
     
     for await (const queue of accdata) {

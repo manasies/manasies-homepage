@@ -64,7 +64,7 @@ section {
 }
 .headline .sliding-headline {
   white-space: nowrap;
-  animation: slideLeft 40s infinite linear;
+  animation: slideLeft 60s infinite linear;
 }
 .headline .sliding-headline span {
   margin-right: 0.1em;
@@ -88,7 +88,7 @@ section {
 }
 .subline .sliding-headline {
   white-space: nowrap;
-  animation: slideLeft 40s infinite linear reverse;
+  animation: slideLeft 60s infinite linear reverse;
   margin-top: -7px;
 }
 .subline .sliding-headline span {

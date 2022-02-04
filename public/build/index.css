@@ -161,6 +161,11 @@ section {
   max-height: 3%;
 }
 
+#leagueIcon {
+  max-width: 25%;
+  height: auto;
+}
+
 .leagueStatsWrapper {
   z-index: 50;
   position: relative;

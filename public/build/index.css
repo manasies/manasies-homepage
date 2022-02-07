@@ -107,7 +107,9 @@ canvas {
 
 #arrowtext {
   font-size: 12px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #botarrow {
@@ -130,84 +132,111 @@ canvas {
   margin-top: 10vh;
 }
 
-.subtitleDiv {
-  position: relative;
-  margin-left: 10vw;
+.subtitleText {
+  width: 100%;
+  padding-bottom: 36px;
+  padding-top: 12px;
 }
 
-.subtitleText {
+.subtitleText:nth-child(even) {
+  text-align: right;
+}
+
+.subtitleText:nth-child(odd) {
+  text-align: left;
+}
+
+.subtitleText a {
+  padding-left: 5vw;
+  padding-right: 5vw;
   position: relative;
-  margin-left: 5vw;
-  font-family: "rooters";
+  font-family: "Futura PT";
   font-size: 72px;
   color: #fff;
+  text-decoration: none;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.2);
   -webkit-text-stroke-width: 1.5px;
-  animation: appear 2s linear infinite;
+}
+
+.subtitleText:hover {
+  background-color: rgba(212, 212, 212, 0.5);
+  animation: appear 1s linear infinite;
 }
 @keyframes appear {
   0% {
     text-shadow: none;
   }
   5% {
-    text-shadow: 4px 4px #fbf8cc;
+    text-shadow: 0px 4px #fbf8cc;
   }
   10% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf;
   }
   15% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2;
   }
   20% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8;
   }
   25% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0;
   }
   30% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3;
   }
   35% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4;
   }
   40% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5;
   }
   45% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5, 36px 36px #98f5e1;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5, 0px 36px #98f5e1;
   }
   50% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5, 36px 36px #98f5e1;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5, 0px 36px #98f5e1;
   }
   55% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5, 36px 36px #98f5e1;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5, 0px 36px #98f5e1;
   }
   60% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4, 32px 32px #8eecf5;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5;
   }
   65% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3, 28px 28px #90dbf4;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4;
   }
   70% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0, 24px 24px #a3c4f3;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3;
   }
   75% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8, 20px 20px #cfbaf0;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0;
   }
   80% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2, 16px 16px #f1c0e8;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8;
   }
   85% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf, 12px 12px #ffcfd2;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2;
   }
   90% {
-    text-shadow: 4px 4px #fbf8cc, 8px 8px #fde4cf;
+    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf;
   }
   95% {
-    text-shadow: 4px 4px #fbf8cc;
+    text-shadow: 0px 4px #fbf8cc;
   }
   100% {
     text-shadow: none;
+  }
+}
+
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

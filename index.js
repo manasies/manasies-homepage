@@ -59,8 +59,8 @@ app.get('/', async function(req, res) {
     res.render('index.pug', { leaguesumm: summoner });
 });
 
-app.get('/aboutme', function(req, res) {
-    res.render('aboutme.pug', { randomVar: 'random value' });
+app.get('/about', function(req, res) {
+    res.render('aboutme.pug', { leaguesumm: summoner });
 });
 
 app.get('/skills', function(req, res) {

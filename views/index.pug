@@ -6,25 +6,30 @@ block content
         #arrowtext Please scroll down ...
         img#botarrow(style='z-index: 999;' src='assets/img/arrow-down.png')
 
-    .subTitleDiv.subtitleText My Hobbies
+    hr
 
-
-    div.leagueStatsWrapper
-        div WHO AM I 
-        div= leaguesumm.name
-        div= leaguesumm.tier
-        div= leaguesumm.rank
-        img#leagueIcon(src=leaguesumm.profileIconId)
+    div
+        #aboutDiv.subtitleText
+            a(href="/about") About me
+        #skillsDiv.subtitleText
+            a(href="/skills") My Skills
+        #workDiv.subtitleText
+            a(href="/work") Previous work
+        #contactDiv.subtitleText
+            a(href="/contact") Contact me
 
 block scripts
     script.
         var navBar = $('#navBar');
         setTimeout(
             function() {
-                $('#loader-bg').hide();
                 navBar.hide();
-            }, 1000);
-
+                $('#loader-bg').hide();
+            }, 500);
+        
+        $('.subtitleText').click(function() {
+            $(this).children()[0].click();
+        })
         $(window).scroll(function() {
             $("#arrowdiv").css("opacity", 1 - $(window).scrollTop() / 250);
             var scroll = $(window).scrollTop();

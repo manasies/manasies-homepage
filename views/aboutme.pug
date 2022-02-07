@@ -1,1 +1,9 @@
 extends ./layout.pug
+
+block content 
+    div.leagueStatsWrapper
+    div WHO AM I 
+    div= leaguesumm.name
+    div= leaguesumm.tier
+    div= leaguesumm.rank
+    img#leagueIcon(src=leaguesumm.profileIconId)

@@ -150,8 +150,8 @@ canvas {
   font-weight: 500;
   color: #fff;
   text-decoration: none;
-  -webkit-text-stroke-color: rgba(0, 0, 0, 0.2);
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke-width: 2px;
 }
 
 .subtitleText:hover {

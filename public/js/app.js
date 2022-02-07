@@ -20,16 +20,16 @@ window.onload = function() {
 };
 
 function addButterfly() {
-    var geometry = new THREE.SphereGeometry(1, 10)
-    var radiance = loadCubeMap("assets/skybox/radiance");
-    var irradiance = loadCubeMap("assets/skybox/irradiance");
+    // var geometry = new THREE.SphereGeometry(1, 10)
+    // var radiance = loadCubeMap("assets/skybox/radiance");
+    // var irradiance = loadCubeMap("assets/skybox/irradiance");
     
-    iridescenceMaterial = new IridescentMaterial(irradiance, radiance, iridescenceLookUp, 8);
-    const butterfly = new THREE.Mesh( geometry, iridescenceMaterial );
+    // iridescenceMaterial = new IridescentMaterial(irradiance, radiance, iridescenceLookUp, 8);
+    // const butterfly = new THREE.Mesh( geometry, iridescenceMaterial );
 
-    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ));
-    butterfly.position.set(x, y, z);
-    scene.add(butterfly);
+    // const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ));
+    // butterfly.position.set(x, y, z);
+    // scene.add(butterfly);
 }
 
 // function loadButterfly() {
@@ -50,7 +50,7 @@ function init() {
     container.appendChild(renderer.domElement);
     iridescenceLookUp = new ThinFilmFresnelMap();  
     
-    Array(90).fill().forEach(addButterfly);
+    // Array(90).fill().forEach(addButterfly);
     scene.add(camera);
 }
 

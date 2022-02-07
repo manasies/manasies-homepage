@@ -23,6 +23,15 @@ app.set('views', path.join(__dirname, 'views'));
 
 // LEAGUE API
 
+// https://www.youtube.com/watch?v=bSMZgXzC9AA
+// DARK / LIGHT MODE
+// THREE JS EN HAUT DE PAGE ONLY
+// ANIM DE CURSEUR ?
+// ENLEVER TEXTE DEROULANT PARCE QUE C'EST TROP
+// MATTEO BERNARDI EN HAUT A GAUCHE AVEC PETIT ICONE
+
+
+
 async function getLeagueData() {
     data = await api.get('euw1', 'summoner.getBySummonerName', SUMMONER_NAME);
     if (data)

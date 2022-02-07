@@ -1,0 +1,36 @@
+doctype html
+head(lang='en')
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0')
+  title Matt&eacute;o BERNARDI
+  link(rel='stylesheet' href='build/index.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap' rel='stylesheet')
+  link(rel="stylesheet" href="https://use.typekit.net/qfs0xie.css")
+  script(src='lib/three.min.js')
+  script(src='lib/jquery-3.6.0.min.js')
+  script(src='lib/ThinFilmFresnelMap.js')
+  script(src='lib/IridescentMaterial.js')
+  script(src='/assets/OBJLoader.js')
+  script(src='/assets/MTLLoader.js')
+  script(type='module' src='js/app.js')
+#loader-bg
+  img#loading-gif(src='assets/img/loading.gif')
+#bg
+#navBar.navBar
+    a#logo(href="/") Mattéo Bernardi
+    a.navBarBtn(href="/contact") Contact
+    a.navBarBtn(href="/work") Previous work
+    a.navBarBtn(href="/skills") Skills
+    a.navBarBtn(href="/aboutme") About me
+
+block content
+
+block scripts 
+
+script.
+    setTimeout(
+        function() {
+            $('#loader-bg').hide();
+        }, 500);

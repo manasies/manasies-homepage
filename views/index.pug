@@ -1,78 +1,36 @@
-doctype html
-// index.html
-head(lang='en')
-  meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0')
-  title Matt&eacute;o BERNARDI
-  link(rel='stylesheet' href='build/index.css')
-  link(rel='preconnect' href='https://fonts.googleapis.com')
-  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap' rel='stylesheet')
-  script(src='lib/three.min.js')
-  script(src='lib/jquery-3.6.0.min.js')
-  script(src='lib/ThinFilmFresnelMap.js')
-  script(src='lib/IridescentMaterial.js')
-  script(src='/assets/OBJLoader.js')
-  script(src='/assets/MTLLoader.js')
-  script(type='module' src='js/app.js')
-#loader-bg
-  img#loading-gif(src='assets/img/loading.gif')
-#bg
-main
-  .slidingTitleContainer.headingtext
-    .headline
-      .sliding-headline
-        span MATTEOBERNARDI
-        span MATTEOBERNARDI
-        span MATTEOBERNARDI
-        span MATTEOBERNARDI
-      .sliding-headline
-        span MATTEOBERNARDI
-        span MATTEOBERNARDI
-        span MATTEOBERNARDI
-        span MATTEOBERNARDI
-    .subline
-      .sliding-headline
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-      .sliding-headline
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
-        span designer UI/UX
+extends ./layout.pug
+
+block content 
+    //- link(rel='stylesheet' href='build/index.css')
     #arrowdiv
-      #arrowtext Please scroll down ...
-      img#botarrow(style='z-index: 999;' src='assets/img/arrow-down.png')
+        #arrowtext Please scroll down ...
+        img#botarrow(style='z-index: 999;' src='assets/img/arrow-down.png')
 
-.subTitleDiv.subtitleText My Hobbies
+    .subTitleDiv.subtitleText My Hobbies
 
-.leagueStatsWrapper
-  div
-    div WHO AM I 
-    div= leaguesumm.name
-    div= leaguesumm.tier
-    div= leaguesumm.rank
-    img#leagueIcon(src=leaguesumm.profileIconId)
 
-script.
-    setTimeout(
-        function() {
-            $('#loader-bg').hide();
-        }, 1000);
-    $(window).scroll(function() {
-        $("#arrowdiv").css("opacity", 1 - $(window).scrollTop() / 250);
-    });
+    div.leagueStatsWrapper
+        div WHO AM I 
+        div= leaguesumm.name
+        div= leaguesumm.tier
+        div= leaguesumm.rank
+        img#leagueIcon(src=leaguesumm.profileIconId)
+
+block scripts
+    script.
+        var navBar = $('#navBar');
+        setTimeout(
+            function() {
+                $('#loader-bg').hide();
+                navBar.hide();
+            }, 1000);
+
+        $(window).scroll(function() {
+            $("#arrowdiv").css("opacity", 1 - $(window).scrollTop() / 250);
+            var scroll = $(window).scrollTop();
+            if (scroll >= navBar.height()) {
+                navBar.fadeIn(600);
+            } else {
+                navBar.fadeOut(600);
+            }
+        });

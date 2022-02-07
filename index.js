@@ -3,8 +3,8 @@ let express = require('express');
 let path = require('path');
 let app = express();
 let bodyParser = require('body-parser');
-let api = TeemoJS('RGAPI-fbb44f8f-828e-42ce-8fd0-84472275f63b');
-const SUMMONER_NAME = 'DlGlTALOVA';
+let api = TeemoJS('RGAPI-1cdbebf6-e34e-4945-8c70-9ae3d395272f');
+const SUMMONER_NAME = 'Kilse';
 let summoner = {
     "name": SUMMONER_NAME,
     "profileIconId": '',
@@ -25,11 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // https://www.youtube.com/watch?v=bSMZgXzC9AA
 // DARK / LIGHT MODE
-// THREE JS EN HAUT DE PAGE ONLY
 // ANIM DE CURSEUR ?
-// ENLEVER TEXTE DEROULANT PARCE QUE C'EST TROP
-// MATTEO BERNARDI EN HAUT A GAUCHE AVEC PETIT ICONE
-
 
 
 async function getLeagueData() {
@@ -63,9 +59,25 @@ app.get('/', async function(req, res) {
     res.render('index.pug', { leaguesumm: summoner });
 });
 
-app.get('/test', function(req, res) {
-    res.render('test.html', { msg: 'Test de message hihi sexe' });
+app.get('/aboutme', function(req, res) {
+    res.render('aboutme.pug', { randomVar: 'random value' });
 });
+
+app.get('/skills', function(req, res) {
+    res.render('skills.pug', { randomVar: 'random value' });
+});
+
+app.get('/work', function(req, res) {
+    res.render('work.pug', { randomVar: 'random value' });
+});
+
+app.get('/contact', function(req, res) {
+    res.render('contact.pug', { randomVar: 'random value' });
+});
+
+app.get('*', function(req, res){
+    res.status(404).send('Use real route pls no break website i work hard for this :(');
+  });
 
 // APP RUN
 

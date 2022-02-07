@@ -13,50 +13,17 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    background-color: #eeeeee;
 }
 
 #bg {
     z-index: -999;
 }
 
-main {
-    flex-grow: 1;
-    width: 100vw;
-    color: black;
-    z-index: 99;
-    // position: absolute;
-    width: 100%;
-    margin: 0px auto;
-    // padding: 120px 0px;
-    
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
 canvas {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
-}
-
-header {
-    background: var(--dark-bg);
-    grid-column: 2 / span 5;
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing);
-}
-
-section {
-    grid-column: 2 / 8;
-    padding: 1rem;
-    background: var(--dark-bg);
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing);
-}
-
-.left {
-    grid-column: 6 / 12;
 }
 
 .headingtext {
@@ -66,82 +33,6 @@ section {
     -webkit-text-stroke-color: black;
     -webkit-text-fill: none;
 }
-
-.headline {
-    height: var(--headline-height);
-    display: flex;
-    align-items: center;
-    border-left: 0px;
-    border-bottom: 7px solid var(--black);
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    
-    .sliding-headline {
-        white-space: nowrap;
-        animation: slideLeft 60s infinite linear;
-        // margin-top: -32px;
-        
-        span {
-            margin-right: .1em;
-        }
-        
-        span:nth-child(2n) {
-            color: var(--black);
-        }
-        
-        span:nth-child(2n+1) {
-            color: transparent;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: var(--black);
-        }
-    }
-}
-
-.subline {
-    height: var(--subline-height);
-    display: flex;
-    align-items: center;
-    
-    border-bottom: 7px solid var(--black);
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    // overflow: hidden;
-    
-    
-    .sliding-headline {
-        white-space: nowrap;
-        animation: slideLeft 60s infinite linear reverse;
-        
-        margin-top: -7px;
-        
-        span {
-            margin-right: 0.1em;
-        }
-        
-        span:nth-child(2n) {
-            color: var(--black);
-        }
-        
-        span:nth-child(2n+1) {
-            color: transparent;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: var(--black);
-        }
-    }
-}
-
-.slidingTitleContainer {
-    position: absolute;
-    width: calc(100vw - 2 * var(--border-distance-w));
-    height: calc(100vh - 2 * var(--border-distance-w));
-    left: var(--border-distance-w);
-    top: var(--border-distance-w);
-    
-    border: 7px solid var(--black);
-    display: flex;
-    flex-direction: column;
-}
-
 
 @keyframes slideLeft {
     0% {
@@ -172,6 +63,52 @@ section {
     max-height:10%;
 }
 
+#logo {
+    z-index: 100;
+    text-align: center;
+    font-family: 'Futura PT';
+    color: #3b3b3b;
+    opacity: 100%;
+    font-size: 36px;
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+.navBarBtn {
+    text-decoration: none;
+    color: #000000;
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+.navBar a:hover {
+background-color: #ddd;
+color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+background-color: #04AA6D;
+color: white;
+}
+
+.navBar {
+    overflow: hidden;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(212, 212, 212, 0.50);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+}
+
 #arrowdiv {
     width: 100%;
     position:fixed;
@@ -184,7 +121,6 @@ section {
 #arrowtext {
     font-size: 12px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: -2vh;
 }
 
 #botarrow {
@@ -214,7 +150,7 @@ section {
 
 .subtitleText {
     position: relative;
-    margin-top: 100vh;
+    // margin-top: 100vh;
     margin-left: 5vw;
     // text-align: center;
     font-family: 'rooters';

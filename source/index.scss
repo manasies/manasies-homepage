@@ -26,14 +26,6 @@ canvas {
     left: 0;
 }
 
-.headingtext {
-    font-family: 'rooters';
-    font-size: 56px;
-    -webkit-text-stroke-width: 0px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-fill: none;
-}
-
 @keyframes slideLeft {
     0% {
         transform: translate3d(0, 0, 0);
@@ -66,7 +58,9 @@ canvas {
 #logo {
     z-index: 100;
     text-align: center;
-    font-family: 'Futura PT';
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 500;
     color: #3b3b3b;
     opacity: 100%;
     font-size: 36px;
@@ -164,7 +158,8 @@ color: white;
     padding-left: 5vw;
     padding-right: 5vw;
     position: relative;
-    font-family: 'Futura PT';
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
     font-size: 72px;
     font-weight: 500;
     color: #fff;

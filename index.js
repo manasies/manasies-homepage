@@ -3,8 +3,8 @@ let express = require('express');
 let path = require('path');
 let app = express();
 let bodyParser = require('body-parser');
-let api = TeemoJS('RGAPI-1cdbebf6-e34e-4945-8c70-9ae3d395272f');
-const SUMMONER_NAME = 'Kilse';
+let api = TeemoJS('RGAPI-b775974c-b5dc-45b0-9f82-9f53a02eb45b');
+const SUMMONER_NAME = 'ASTRAL OCEAN';
 let summoner = {
     "name": SUMMONER_NAME,
     "profileIconId": '',

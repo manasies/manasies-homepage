@@ -14,35 +14,35 @@ head(lang='en')
   script(src='lib/IridescentMaterial.js')
   script(src='/assets/OBJLoader.js')
   script(src='/assets/MTLLoader.js')
-  script(type='module' src='js/app.js')
 #loader-bg
-  img#loading-gif(src='assets/img/loading.gif')
-#bg
+    img#loading-gif(src='assets/img/loading.gif')
+body
+    #bg
 
-.preNav 
-    a#preNavLogo(href="/") Mattéo Bernardi
-    a.navBarBtn(href="/contact") Contact
-    a.navBarBtn(href="/work") Previous work
-    a.navBarBtn(href="/skills") Skills
-    a.navBarBtn(href="/about") About me
+    .preNav 
+        a#preNavLogo(href="/") Mattéo Bernardi
+        a.navBarBtn(href="/contact") Contact
+        a.navBarBtn(href="/work") Previous work
+        a.navBarBtn(href="/skills") Skills
+        a.navBarBtn(href="/about") About me
 
-#navBar.navBar
-    a#logo(href="/") Mattéo Bernardi
-    a.navBarBtn(href="/contact") Contact
-    a.navBarBtn(href="/work") Previous work
-    a.navBarBtn(href="/skills") Skills
-    a.navBarBtn(href="/about") About me
+    #navBar.navBar
+        .navTxt
+            a#logo(href="/") Mattéo Bernardi
+            a.navBarBtn(href="/contact") Contact
+            a.navBarBtn(href="/work") Previous work
+            a.navBarBtn(href="/skills") Skills
+            a.navBarBtn(href="/about") About me
 
-block content
+    block content
 
-block scripts 
+    block scripts
 
-.footer
-    div FOOTER HERE
-    div FOOTER HERE
-    div FOOTER HERE
-    div FOOTER HERE
-    div FOOTER HERE
+    #footer
+        a.contactMe(href="https://www.linkedin.com/in/matt%C3%A9o-bernardi-75b603181/") Linkedin
+        a.contactMe(href="mailto:matteo.bernardi@epitech.eu") Mail
+        div matteo.bernardi@epitech.eu
+        div © Mattéo Bernardi
 
 script.
     setTimeout(

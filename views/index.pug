@@ -1,6 +1,7 @@
 extends ./layout.pug
 
 block content 
+    script(type='module' src='js/appindex.js')
     //- link(rel='stylesheet' href='build/index.css')
     #arrowdiv
         #arrowtext Please scroll down ...
@@ -20,6 +21,12 @@ block content
 
 block scripts
     script.
+        $(".subtitleText").mouseenter(function() {
+            $(this).removeClass("wasHovered");
+        })
+        $(".subtitleText").mouseout(function() {
+            $(this).addClass("wasHovered");
+        });
         var navBar = $('#navBar');
         setTimeout(
             function() {
@@ -32,6 +39,10 @@ block scripts
         })
         $(window).scroll(function() {
             $("#arrowdiv").css("opacity", 1 - $(window).scrollTop() / 250);
+            if ($("#arrowdiv").css("opacity") == 0)
+                $("#arrowdiv").css("z-index", "-999");
+            else 
+                $("#arrowdiv").css("z-index", "999");
             var scroll = $(window).scrollTop();
             console.log(scroll);
             if (scroll >= navBar.height()) {

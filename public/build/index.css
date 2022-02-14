@@ -1,7 +1,8 @@
 @import "/assets/fonts/stylesheet.css";
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   background-color: #eeeeee;
 }
 
@@ -90,6 +91,11 @@ canvas {
   z-index: 999;
 }
 
+.navTxt {
+  padding-right: 24px;
+  padding-left: 12px;
+}
+
 #arrowdiv {
   width: 100%;
   position: fixed;
@@ -111,25 +117,12 @@ canvas {
   max-height: 3%;
 }
 
-#leagueIcon {
-  max-width: 25%;
-  height: auto;
-}
-
-.leagueStatsWrapper {
-  z-index: 50;
-  position: relative;
-  box-shadow: inset 0 0 2000px rgba(59, 59, 59, 0.3);
-  backdrop-filter: blur(7px);
-  margin-left: 60vw;
-  margin-right: 10vw;
-  margin-top: 10vh;
-}
-
 .subtitleText {
   width: 100%;
   padding-bottom: 36px;
   padding-top: 12px;
+  transition: background-color 0.5s;
+  cursor: grab;
 }
 
 .subtitleText:nth-child(even) {
@@ -155,80 +148,50 @@ canvas {
 }
 
 .subtitleText:hover {
-  background-color: rgba(212, 212, 212, 0.5);
-  animation: appear 1s linear infinite;
+  background-color: rgba(190, 190, 190, 0.3);
+  animation: appear 0.4s linear normal forwards;
 }
 @keyframes appear {
   0% {
     text-shadow: none;
   }
-  5% {
-    text-shadow: 0px 4px #FFF242;
-  }
   10% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844;
-  }
-  15% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C;
+    text-shadow: 0px 4px #FFF242;
   }
   20% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1;
-  }
-  25% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF;
-  }
-  30% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC;
-  }
-  35% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8;
-  }
-  40% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3ac8f8, 0px 32px #34E5F5;
-  }
-  45% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
-  }
-  50% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
-  }
-  55% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
-  }
-  60% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5;
-  }
-  65% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8;
-  }
-  70% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC;
-  }
-  75% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF;
-  }
-  80% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1;
-  }
-  85% {
-    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C;
-  }
-  90% {
     text-shadow: 0px 4px #FFF242, 0px 8px #FF9844;
   }
-  95% {
-    text-shadow: 0px 4px #FFF242;
+  30% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C;
+  }
+  40% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1;
+  }
+  50% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF;
+  }
+  60% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC;
+  }
+  70% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8;
+  }
+  80% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3ac8f8, 0px 32px #34E5F5;
+  }
+  90% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
   }
   100% {
-    text-shadow: none;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
   }
 }
 
 .preNav {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  padding-left: 24px;
+  width: 97%;
 }
 
 #preNavLogo {
@@ -240,8 +203,118 @@ canvas {
   color: #3b3b3b;
   opacity: 100%;
   font-size: 36px;
-  margin-left: 12px;
   text-decoration: none;
+}
+
+.wasHovered {
+  animation: disappear 0.3s linear normal forwards;
+}
+@keyframes disappear {
+  0% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
+  }
+  10% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
+  }
+  20% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3ac8f8, 0px 32px #34E5F5;
+  }
+  30% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8;
+  }
+  40% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC;
+  }
+  50% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF;
+  }
+  60% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1;
+  }
+  70% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C;
+  }
+  80% {
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844;
+  }
+  90% {
+    text-shadow: 0px 4px #FFF242;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+#footer {
+  width: 100%;
+  background-color: #232629;
+  left: 0;
+  position: relative;
+  margin-bottom: 0;
+  height: 140px;
+  color: #fff;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+}
+
+.contactMe {
+  overflow: visible;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 2%;
+  font-weight: 500;
+}
+
+.bodypage {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.aboutMe {
+  grid-column: 3;
+  grid-row: 1;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+}
+
+#leagueIcon {
+  max-width: 45%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#leagueName {
+  font-size: 36px;
+}
+
+#leagueRank {
+  font-size: 24px;
+}
+
+#leagueLP {
+  font-size: 14px;
+}
+
+.leagueStatsWrapper {
+  z-index: 50;
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #232629;
+  backdrop-filter: blur(7px);
+  text-align: center;
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */

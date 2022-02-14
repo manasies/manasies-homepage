@@ -30,10 +30,12 @@ app.set('views', path.join(__dirname, 'views'));
 
 async function getLeagueData() {
     data = await api.get('euw1', 'summoner.getBySummonerName', SUMMONER_NAME);
+    console.log(data.status.status_code)
+    if (data.status.status_code === 403)
+        return;
     if (data)
         summoner.profileIconId = 'http://ddragon.leagueoflegends.com/cdn/12.3.1/img/profileicon/' + data.profileIconId + '.png';
     let summonerId = data.id;
-    console.log(data);
     accdata = await api.get('euw1', 'league.getLeagueEntriesForSummoner', summonerId);
     console.log(accdata);
     

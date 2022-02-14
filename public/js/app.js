@@ -42,8 +42,8 @@ function init() {
     container = document.getElementById("bg");
     renderer = new THREE.WebGLRenderer( { alpha: true } );
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setClearColor(0xeeeeee, 1.0);
-    // renderer.setClearColor(0xeeeeee, 0);
+    // renderer.setClearColor(0xeeeeee, 1.0);
+    renderer.setClearColor(0xeeeeee, 0);
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera();
     camera.position.set(0, 0, 0);

@@ -146,9 +146,9 @@ canvas {
   position: relative;
   font-family: futura-pt, sans-serif;
   font-style: normal;
-  font-size: 72px;
+  font-size: 84px;
   font-weight: 500;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
   -webkit-text-stroke-width: 2px;
@@ -163,77 +163,85 @@ canvas {
     text-shadow: none;
   }
   5% {
-    text-shadow: 0px 4px #fbf8cc;
+    text-shadow: 0px 4px #FFF242;
   }
   10% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844;
   }
   15% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C;
   }
   20% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1;
   }
   25% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF;
   }
   30% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC;
   }
   35% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8;
   }
   40% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3ac8f8, 0px 32px #34E5F5;
   }
   45% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5, 0px 36px #98f5e1;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
   }
   50% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5, 0px 36px #98f5e1;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
   }
   55% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5, 0px 36px #98f5e1;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5, 0px 36px #41ffd6;
   }
   60% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4, 0px 32px #8eecf5;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8, 0px 32px #34E5F5;
   }
   65% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3, 0px 28px #90dbf4;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC, 0px 28px #3AC9F8;
   }
   70% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0, 0px 24px #a3c4f3;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF, 0px 24px #5399FC;
   }
   75% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8, 0px 20px #cfbaf0;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1, 0px 20px #9A5CFF;
   }
   80% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2, 0px 16px #f1c0e8;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C, 0px 16px #FF5AE1;
   }
   85% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf, 0px 12px #ffcfd2;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844, 0px 12px #FF505C;
   }
   90% {
-    text-shadow: 0px 4px #fbf8cc, 0px 8px #fde4cf;
+    text-shadow: 0px 4px #FFF242, 0px 8px #FF9844;
   }
   95% {
-    text-shadow: 0px 4px #fbf8cc;
+    text-shadow: 0px 4px #FFF242;
   }
   100% {
     text-shadow: none;
   }
 }
 
-@keyframes animatedGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.preNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#preNavLogo {
+  z-index: 100;
+  text-align: center;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #3b3b3b;
+  opacity: 100%;
+  font-size: 36px;
+  margin-left: 12px;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */

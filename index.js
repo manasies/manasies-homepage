@@ -21,11 +21,14 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-// LEAGUE API
 
 // https://www.youtube.com/watch?v=bSMZgXzC9AA
 // DARK / LIGHT MODE
 // ANIM DE CURSEUR ?
+
+// WHY FOOTER WEIRD ON SOME SCREEN SIZES ????
+// LEAGUE API KEY IN ENV FILE ? IDK MAYBE MAYBE NOT
+//
 
 
 async function getLeagueData() {

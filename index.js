@@ -3,7 +3,7 @@ let express = require('express');
 let path = require('path');
 let app = express();
 let bodyParser = require('body-parser');
-let api = TeemoJS('RGAPI-d5a4587e-5e22-4ec8-b474-926278815a0e');
+let api = TeemoJS('RGAPI-9fd2c157-5de8-4511-9c76-3b996dc80354');
 const SUMMONER_NAME = 'ASTRAL OCEAN';
 let summoner = {
     "name": SUMMONER_NAME,
@@ -21,11 +21,14 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-// LEAGUE API
 
 // https://www.youtube.com/watch?v=bSMZgXzC9AA
 // DARK / LIGHT MODE
 // ANIM DE CURSEUR ?
+
+// WHY FOOTER WEIRD ON SOME SCREEN SIZES ????
+// LEAGUE API KEY IN ENV FILE ? IDK MAYBE MAYBE NOT
+//
 
 
 async function getLeagueData() {

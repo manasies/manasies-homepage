@@ -3,8 +3,9 @@ let express = require('express');
 let path = require('path');
 let app = express();
 let bodyParser = require('body-parser');
-let api = TeemoJS('RGAPI-9fd2c157-5de8-4511-9c76-3b996dc80354');
-const SUMMONER_NAME = 'ASTRAL OCEAN';
+let api = TeemoJS('RGAPI-90886fad-8719-4eb6-81e7-0e3d59a0aa7f');
+// const SUMMONER_NAME = 'ASTRAL OCEAN';
+const SUMMONER_NAME = 'Kilse';
 let summoner = {
     "name": SUMMONER_NAME,
     "profileIconId": '',
@@ -34,12 +35,13 @@ app.set('views', path.join(__dirname, 'views'));
 async function getLeagueData() {
     data = await api.get('euw1', 'summoner.getBySummonerName', SUMMONER_NAME);
     console.log(data)
+    if (data == null)
+        return;
     if (data.status) {
         console.log('No League data found through API, probably a key error');
         return;
     }
-    if (data)
-        summoner.profileIconId = 'http://ddragon.leagueoflegends.com/cdn/12.3.1/img/profileicon/' + data.profileIconId + '.png';
+    summoner.profileIconId = 'http://ddragon.leagueoflegends.com/cdn/12.3.1/img/profileicon/' + data.profileIconId + '.png';
     let summonerId = data.id;
     accdata = await api.get('euw1', 'league.getLeagueEntriesForSummoner', summonerId);
     console.log(accdata);

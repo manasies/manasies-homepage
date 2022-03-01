@@ -1,1 +1,48 @@
 extends ./layout.pug
+
+block content
+
+    .headlineContainer
+        .headlineSkill
+            .slidingSkill 
+                span.replaceTxt MY SKILLS 
+                span.replaceTxt MY SKILLS 
+                span.replaceTxt MY SKILLS 
+                span.replaceTxt MY SKILLS 
+            .slidingSkill 
+                span.replaceTxt MY SKILLS 
+                span.replaceTxt MY SKILLS 
+                span.replaceTxt MY SKILLS 
+                span.replaceTxt MY SKILLS 
+
+
+    .bodypage
+        .skillCard Web Development
+            div HTML, CSS, SCSS, JavaScript, Vue.js, React.js
+        .skillCard Web Design
+            div Web Design
+        .skillCard Backend
+            div Flask, Node.js, Express
+        .skillCard UI/UX Design
+            div UI/UX Design
+        .skillCard Databases
+            div SQL, MongoDB
+        .skillCard DevOps
+            div Docker
+        .skillCard Game Development
+            div C# Unity
+        .skillCard Unix
+            div Unix
+        .skillCard Software Development 
+            div C, C++, Java, Python
+        .skillCard Digital Design
+            div Adobe Suite
+
+block scripts
+    script.
+        $('.skillCard').hover(function () {
+            //- alert($(this).html());
+            var txt = $(this).children().html();
+            txt = '<span>' + txt + '</span>';
+            $('span').replaceWith(txt);
+        })

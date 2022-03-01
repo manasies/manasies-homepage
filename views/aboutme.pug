@@ -4,13 +4,22 @@ block content
     script(type='module' src='js/apppages.js')
     .bodypage
         .aboutMe
-            div Hello, I'm Mattéo. I am a student developer from France.
+            div Hello, I'm Mattéo, a student developer from France.
             div I am passionate about innovation, digital technologies and design.
             
             div My hobbies range from music (playing the piano), skateboarding, digital design, to video games.
             div You can find below my current rank in league of legends (gathered from Riot Games API) 😎
-        .leagueStatsWrapper
-            #leagueName= leaguesumm.name
-            img#leagueIcon(src=leaguesumm.profileIconId)
-            #leagueRank= leaguesumm.tier + ' ' + leaguesumm.rank
-            #leagueLP= leaguesumm.leaguePoints + ' LPs'
+        if leaguesumm.rank
+            .leagueStatsWrapper
+                #leagueName= leaguesumm.name
+                img#leagueIcon(src=leaguesumm.profileIconId)
+                #leagueRank= leaguesumm.tier + ' ' + leaguesumm.rank
+                #leagueLP= leaguesumm.leaguePoints + ' LPs'
+        else
+            .leagueStatsWrapper
+                br
+                div It feels like I have some problem
+                div gathering data from Riot Games API 😔
+                br
+        .testDiv
+            div This is just a test div

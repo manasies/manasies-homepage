@@ -542,7 +542,7 @@ strong {
     color: #eeeeee;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    @include keyframes(appear){
+    @include keyframes(strongTXT){
         0%{
             text-shadow: none;
         }
@@ -695,5 +695,5 @@ strong {
             text-shadow: none;
         }
     }
-    animation: appear 1s linear normal infinite;
+    animation: strongTXT 1s linear normal infinite;
 } 

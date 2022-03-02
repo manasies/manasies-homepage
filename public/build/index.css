@@ -427,9 +427,9 @@ strong {
   color: #eeeeee;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  animation: appear 1s linear normal infinite;
+  animation: strongTXT 1s linear normal infinite;
 }
-@keyframes appear {
+@keyframes strongTXT {
   0% {
     text-shadow: none;
   }

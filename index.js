@@ -4,8 +4,8 @@ let path = require('path');
 let app = express();
 let bodyParser = require('body-parser');
 let api = TeemoJS('RGAPI-90886fad-8719-4eb6-81e7-0e3d59a0aa7f');
-// const SUMMONER_NAME = 'ASTRAL OCEAN';
-const SUMMONER_NAME = 'Kilse';
+const SUMMONER_NAME = 'ASTRAL OCEAN';
+// const SUMMONER_NAME = 'Kilse';
 let summoner = {
     "name": SUMMONER_NAME,
     "profileIconId": '',

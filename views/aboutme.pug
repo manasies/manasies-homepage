@@ -4,11 +4,11 @@ block content
     script(type='module' src='js/apppages.js')
     .bodypage
         .aboutMe
-            div Hello, I'm Mattéo, a student developer from France.
-            div I am passionate about innovation, digital technologies and design.
-            
-            div My hobbies range from music (playing the piano), skateboarding, digital design, to video games.
-            div You can find below my current rank in league of legends (gathered from Riot Games API) 😎
+            div Hello, I'm <strong>Mattéo</strong>, a student developer from France.
+            div I am passionate about <strong>innovation, digital technologies and design.</strong>
+            div My hobbies range from <strong>music</strong> (playing the piano), 
+            | <strong>skateboarding</strong>, <strong>digital design</strong>, to <strong>video games</strong>.
+            div You can find below my current rank in <strong>League of Legends</strong> (gathered from Riot Games API) 😎
         if leaguesumm.rank
             .leagueStatsWrapper
                 #leagueName= leaguesumm.name
@@ -21,5 +21,3 @@ block content
                 div It feels like I have some problem
                 div gathering data from Riot Games API 😔
                 br
-        .testDiv
-            div This is just a test div

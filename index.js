@@ -21,7 +21,7 @@ let summoner = {
 
 const transporter = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com',
-    port: 587,
+    port: 554,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASS,

@@ -3,9 +3,11 @@ let express = require('express');
 let path = require('path');
 let app = express();
 let bodyParser = require('body-parser');
-let api = TeemoJS('RGAPI-90886fad-8719-4eb6-81e7-0e3d59a0aa7f');
-const SUMMONER_NAME = 'ASTRAL OCEAN';
-// const SUMMONER_NAME = 'Kilse';
+const nodemailer = require("nodemailer");
+const multiparty = require("multiparty");
+require("dotenv").config();
+let api = TeemoJS(process.env.LEAGUE_API_KEY);
+const SUMMONER_NAME = process.env.LEAGUE_SUMMONER;
 let summoner = {
     "name": SUMMONER_NAME,
     "profileIconId": '',
@@ -16,6 +18,15 @@ let summoner = {
     "losses": '',
     "winrate": ''
 }
+
+const transporter = nodemailer.createTransport({
+    host: 'smtp-mail.outlook.com',
+    port: 587,
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASS,
+    },
+});
 
 app.set('port', (process.env.PORT || 8080));
 app.use(express.static('public'));
@@ -83,6 +94,34 @@ app.get('/work', function(req, res) {
 app.get('/contact', function(req, res) {
     res.render('contact.pug', { randomVar: 'random value' });
 });
+
+app.post('/contact', function(req, res) {
+    let form = new multiparty.Form();
+    let data = {};
+    form.parse(req, function (err, fields) {
+        console.log(fields);
+        Object.keys(fields).forEach(function (property) {
+            data[property] = fields[property].toString();
+        });
+
+        const mail = {
+        from: 'Portfolio Mailing',
+        to: process.env.EMAIL,
+        subject: data.subject,
+        text: `${data.name} <${data.email}> \n${data.formContent}`,
+        };
+
+        //3.
+        transporter.sendMail(mail, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Something went wrong.");
+        } else {
+            res.status(200).send("Email successfully sent to recipient!");
+        }
+        });
+    });
+})
 
 app.get('*', function(req, res){
     res.status(404).send('Use real route pls no break website i work hard for this :(');

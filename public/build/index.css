@@ -299,6 +299,25 @@ canvas {
   padding-bottom: 12px;
 }
 
+.aboutMe2 {
+  grid-row: 5;
+  grid-column: 2/3;
+  text-decoration: none;
+}
+
+.aboutMe2 a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 124px;
+  color: #eeeeee;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 #leagueIcon {
   max-width: 100%;
   height: 192px;
@@ -421,6 +440,14 @@ hr {
   color: black;
 }
 
+.aboutMe2 div {
+  font-size: 68px;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: black;
+}
+
 strong {
   font-weight: 700;
   font-size: 124px;
@@ -493,6 +520,82 @@ strong {
   100% {
     text-shadow: none;
   }
+}
+
+#EoFEmoji {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 96px;
+}
+
+input, select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+}
+
+label {
+  font-size: 24px;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+input[type=submit] {
+  font-weight: 700;
+  font-size: 84px;
+  color: #eeeeee;
+  border: none;
+  left: auto;
+  right: auto;
+  width: 100%;
+  padding-bottom: 18px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  cursor: pointer;
+  animation: strongTXT 1s linear normal infinite;
+}
+
+input[type=submit]:hover {
+  color: #cccccc;
+}
+
+.formContainer {
+  margin-top: 60px;
+  width: 80%;
+  margin-left: 7%;
+  margin-bottom: 3%;
+}
+
+.contactInfo {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  color: #000000;
+  margin-left: 5%;
+  margin-bottom: 4%;
+}
+.contactInfo a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 60px;
+  color: #eeeeee;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 
 /*# sourceMappingURL=index.css.map */

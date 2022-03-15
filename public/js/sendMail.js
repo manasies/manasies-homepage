@@ -6,7 +6,7 @@ const formEvent = form.addEventListener("submit", (event) => {
 
   let mail = new FormData(form);
 
-  sendMail(mail);
+  console.log(sendMail(mail));
 })
 
 const sendMail = (mail) => {
@@ -15,7 +15,11 @@ const sendMail = (mail) => {
       body: mail,
   
     }).then((response) => {
-        console.log(response.json());
-      return response.json();
+        console.log(response);
+        if (response.status == '200') {
+            alert('Email Successfuly sent to recipient !');
+        }
+        else
+            alert('Error while sending !');
     });
   };

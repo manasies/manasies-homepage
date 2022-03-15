@@ -35,11 +35,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 // https://www.youtube.com/watch?v=bSMZgXzC9AA
-// DARK / LIGHT MODE
 // ANIM DE CURSEUR ?
 
 // WHY FOOTER WEIRD ON SOME SCREEN SIZES ????
-// LEAGUE API KEY IN ENV FILE ? IDK MAYBE MAYBE NOT
 //
 
 
@@ -99,24 +97,24 @@ app.post('/contact', function(req, res) {
     let form = new multiparty.Form();
     let data = {};
     form.parse(req, function (err, fields) {
-        console.log(fields);
+        // console.log(fields);
         Object.keys(fields).forEach(function (property) {
             data[property] = fields[property].toString();
         });
 
         const mail = {
-        from: 'Portfolio Mailing',
-        to: process.env.EMAIL,
-        subject: data.subject,
-        text: `${data.name} <${data.email}> \n${data.formContent}`,
+            from: 'Portfolio Mailing',
+            to: process.env.EMAIL,
+            subject: data.subject,
+            text: `${data.name} <${data.email}> \n${data.formContent}`,
         };
-
         //3.
         transporter.sendMail(mail, (err, data) => {
         if (err) {
             console.log(err);
             res.status(500).send("Something went wrong.");
         } else {
+            console.log('here');
             res.status(200).send("Email successfully sent to recipient!");
         }
         });

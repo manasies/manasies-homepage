@@ -388,11 +388,18 @@ color: white;
     grid-column: 2/3;
     grid-row: 1;
     text-align: left;
-    font-size: 96px;
+    font-size: 24px;
+}
+
+.aboutMe{
+    grid-column: 2/3;
+    grid-row: 1;
+    text-align: left;
+    font-size: 24px;
 }
 
 .leagueStatsWrapper {
-    z-index: 50;
+    z-index: 0;
     grid-template-columns: repeat(5, 1fr);
     // grid-gap: 10px;
     // grid-auto-rows: minmax(100px, auto);
@@ -406,19 +413,25 @@ color: white;
 
 .aboutMe2{
     grid-row: 5;
-    grid-column: 2/3;
+    grid-column: 3/4;
     text-decoration: none;
 }
 
 .aboutMe2 a {
     text-decoration: none;
     font-weight: 700;
-    font-size: 124px;
+    font-size: 24px;
     color: #eeeeee;
     // text-decoration: none;
-    -webkit-text-stroke-width: 2px;
+    transition: color 0.3s ease-in-out;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    
+}
+
+.aboutMe2 a:hover {
+    color: #000;
+    // -webkit-text-stroke-color: white;
+    // transition: all 0.2s ease-in-out;
 }
 
 a:link {
@@ -549,183 +562,28 @@ hr {
 
 }
 
-.aboutMe div{
-    font-size: 68px;
+.aboutMe p{
+    font-size: 24px;
     font-family: futura-pt, sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     color: black;
 }
 
-.aboutMe2 div{
-    font-size: 68px;
+.aboutMe2 p{
+    font-size: 24px;
     font-family: futura-pt, sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     color: black;
 }
 
 strong {
     font-weight: 700;
-    font-size: 124px;
     color: #eeeeee;
     // text-decoration: none;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    @include keyframes(strongTXT){
-        0%{
-            text-shadow: none;
-        }
-        5%{
-            text-shadow: 0px 4px #FFF242;
-        }
-       10%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844;
-       }
-       15%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C;
-       }
-       20%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1;
-       }
-       25%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF;
-       }
-       30%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC;
-       }
-       35%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3AC9F8;
-       }
-       40%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3ac8f8,
-               0px 32px #34E5F5;
-       }
-       45%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3AC9F8,
-               0px 32px #34E5F5,
-               0px 36px #41ffd6;
-       }
-       50%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3AC9F8,
-               0px 32px #34E5F5,
-               0px 36px #41ffd6;
-       }
-       55%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3AC9F8,
-               0px 32px #34E5F5,
-               0px 36px #41ffd6;
-       }
-       60%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3AC9F8,
-               0px 32px #34E5F5,
-               0px 36px #41ffd6;
-       }
-       65%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3ac8f8,
-               0px 32px #34E5F5;
-       }
-       70%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC,
-               0px 28px #3AC9F8;
-       }
-       75%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF,
-               0px 24px #5399FC;
-       }
-       80%{
-        text-shadow: 0px 4px #FFF242,
-               0px 8px #FF9844,
-               0px 12px #FF505C,
-               0px 16px #FF5AE1,
-               0px 20px #9A5CFF;
-       }
-       85%{
-        text-shadow: 0px 4px #FFF242,
-        0px 8px #FF9844,
-        0px 12px #FF505C,
-        0px 16px #FF5AE1;
-        }
-        90%{
-            text-shadow: 0px 4px #FFF242,
-            0px 8px #FF9844,
-            0px 12px #FF505C;
-        }
-        95%{
-            text-shadow: 0px 4px #FFF242,
-            0px 8px #FF9844;
-        }
-        100%{
-            text-shadow: none;
-        }
-    }
-    animation: strongTXT 1s linear normal infinite;
 } 
 
 #EoFEmoji {
@@ -766,7 +624,16 @@ input[type=submit] {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     cursor: pointer;
-    animation: strongTXT 1s linear normal infinite;
+    text-shadow: 0px 4px #FFF242,
+    0px 8px #FF9844,
+    0px 12px #FF505C,
+    0px 16px #FF5AE1,
+    0px 20px #9A5CFF,
+    0px 24px #5399FC,
+    0px 28px #3AC9F8,
+    0px 32px #34E5F5,
+    0px 36px #41ffd6;
+    // animation: strongTXT 1s linear normal infinite;
 }
 
 input[type=submit]:hover {
@@ -797,4 +664,16 @@ input[type=submit]:hover {
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: black;
     }
+}
+
+#iribg{
+    position: absolute;
+    z-index: 1;
+    // grid-column: 3;
+    // grid-row: 1;
+    max-width: 20%;
+    opacity: 100%;
+    mix-blend-mode:hard-light;
+    // border: 2px solid grey;
+    // border-radius: 2px;
 }

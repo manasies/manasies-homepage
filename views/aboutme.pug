@@ -4,11 +4,9 @@ block content
     script(type='module' src='js/apppages.js')
     .bodypage
         .aboutMe
-            div Hello, I'm <strong>Mattéo</strong>, a student developer from France.
-            div I am passionate about <strong>innovation, digital technologies and design.</strong>
-            div My hobbies range from <strong>music</strong> (playing the piano), 
-            | <strong>skateboarding</strong>, <strong>digital design</strong>, <strong>producing music</strong> to <strong>video games</strong>.
-            div You can find below my current rank in <strong>League of Legends</strong> (gathered from Riot Games API) 😎
+            p Hello, I'm Mattéo, a student developer from France. I am passionate about innovation, digital technologies and design. My hobbies range from music (playing the piano and producing), skateboarding, digital design to video games. 
+            p You can find below my current rank in League of Legends (gathered from Riot Games API) 😎
+        img#iribg(src='assets/img/iribg1.jpeg')
         if leaguesumm.rank
             .leagueStatsWrapper
                 #leagueName= leaguesumm.name
@@ -23,9 +21,31 @@ block content
                 br
 
         .aboutMe2
-            div I am actually looking for an <strong>internship !</strong>
-            div <br>If you are interested in my
-            a(href="/skills").subtitleText Skills (click me),
-            div you can
-            a(href="/contact").subtitleText Contact Me !
+            p I am actually looking for an <strong>internship !</strong> If you are interested in my <a href="/skills">Skills (click me), </a> you can <a href="/contact"> Contact Me (also click me)</a>.
     #EoFEmoji 😊
+
+block scripts
+    script.
+        let imgNumber = 1;
+        let counter = 0;
+
+        $(document).mousemove(function (e) {
+            $("#iribg").css({ left: e.pageX +2, top: e.pageY + 2 });
+            counter++;
+            if (counter < 20)
+                return;
+            counter = 0;
+            imgNumber = Math.floor(Math.random() * 10) + 1;
+            $("#iribg").attr("src", 'assets/img/iribg' + imgNumber + '.jpeg');
+            console.log (imgNumber);
+        });
+        $(window).scroll(function(e){
+            $("#iribg").css({ left: e.pageX +2, top: e.pageY + 2 });
+            counter++;
+            if (counter < 20)
+                return;
+            counter = 0;
+            imgNumber = Math.floor(Math.random() * 10) + 1;
+            $("#iribg").attr("src", 'assets/img/iribg' + imgNumber + '.jpeg');
+            console.log (imgNumber);
+        });

@@ -59,15 +59,15 @@ function initScene() {
     var irradiance = loadCubeMap("assets/skybox/irradiance");
     
     var torusGeom = new THREE.TorusKnotGeometry(10, 3, 100, 16);
-    iridescenceMaterial = new IridescentMaterial(irradiance, radiance, iridescenceLookUp, 8);
+    iridescenceMaterial = new IridescentMaterial(irradiance, radiance, iridescenceLookUp, 9);
     torus = new THREE.Mesh(torusGeom, iridescenceMaterial);
     torus.position.z = -55;
     scene.add(torus);
 }
 
 function render() {
-    torus.rotation.y += .001;
-    torus.rotation.x += .0009;
+    torus.rotation.y += .002;
+    torus.rotation.x += .0015;
     renderer.render(scene, camera);
     requestAnimationFrame(render);
 }
@@ -101,13 +101,15 @@ function loadCubeMap(path) {
 function moveCamera() {
     const t = document.body.getBoundingClientRect().top;
 
-    torus.rotation.x += 0.001;
-    torus.rotation.y += 0.001;
-    torus.rotation.z += 0.001;
+    const multiplier = 8;
 
-    camera.position.z = t * -0.01;
-    camera.position.x = t * -0.0002;
-    camera.position.y = t * -0.0002;
+    torus.rotation.x += 0.001 * multiplier;
+    torus.rotation.y += 0.001 * multiplier;
+    torus.rotation.z += 0.001 * multiplier;
+
+    camera.position.z = t * -0.01 * multiplier;
+    camera.position.x = t * -0.0002 * multiplier;
+    camera.position.y = t * -0.0002 * multiplier;
 }
 
 document.body.onscroll = moveCamera;

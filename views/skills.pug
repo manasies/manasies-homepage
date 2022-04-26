@@ -1,10 +1,11 @@
 extends ./layout.pug
 
 block content
-
+    script(type='module' src='js/appskills.js')
+    #skillsbg
     .headlineContainer
         .headlineSkill
-            .slidingSkill 
+            .slidingSkill
                 span.replaceTxt MY SKILLS 
                 span.replaceTxt MY SKILLS 
                 span.replaceTxt MY SKILLS 
@@ -46,10 +47,11 @@ block content
         .skillCard Digital Design
             div(style='display:none;') Adobe Suite
 
+        .middleCard Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper sem neque, quis auctor sem convallis vel. Nulla at augue a felis laoreet ultricies. Morbi placerat maximus tellus, non sagittis sapien semper eget. Sed sagittis odio velit, eu gravida nisl vulputate vulputate. Quisque mauris orci, lacinia vel finibus id, feugiat a massa.
+
 block scripts
     script.
         $('.skillCard').hover(function () {
-            //- alert($(this).html());
             var txt = $(this).children().html();
             txt = '<span>' + txt + '</span>';
             $('span').replaceWith(txt);

@@ -1,1 +1,38 @@
 extends ./layout.pug
+
+block content
+    .experienceContainer
+        .experience(style="grid-row: 1;")
+            img.cubegif(src='assets/img/testcube.gif')
+            .experienceTitle Hexagonal
+            .experienceDate Septembre 2018 - Décembre 2018
+        .experience(style="grid-row: 2;")
+            .experienceTitle(style="font-size:24px;") University of Jonkoping
+            img.cubegif(src='assets/img/testcube.gif')
+            .experienceDate Septembre 2018 - Décembre 2018
+        .experience(style="grid-row: 3;")
+            img.cubegif(src='assets/img/testcube.gif')
+            .experienceTitle Sals Electricité
+            .experienceDate Septembre 2018 - Décembre 2018
+        .experience(style="grid-row: 4;")
+            .experienceTitle ENR Innovation
+            img.cubegif(src='assets/img/testcube.gif')
+            .experienceDate Septembre 2018 - Décembre 2018
+        .experience(style="grid-row: 5;")
+            img.cubegif(src='assets/img/testcube.gif')
+            .experienceTitle Green EIP
+            .experienceDate Septembre 2018 - Décembre 2018
+        .experience(style="grid-row: 6;")
+            .experienceTitle GT2i
+            img.cubegif(src='assets/img/testcube.gif')
+            .experienceDate Septembre 2018 - Décembre 2018
+        .experience(style="grid-row: 7;")
+            img.cubegif(src='assets/img/testcube.gif')
+            .experienceTitle Epitech
+            .experienceDate Septembre 2018 - Décembre 2018
+
+block scripts
+    script.
+        $('.experience').hover(function () {
+            this.child();
+        }

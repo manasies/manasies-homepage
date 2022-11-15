@@ -509,14 +509,6 @@ hr {
     transition: grid-column 2s ease;
 }
 
-.middleCard {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    display:block;
-    border: solid black;
-    transform: translate(-50%, -50%);
-}
 
 .skillCard:hover {
 }
@@ -526,6 +518,15 @@ hr {
 }
 
 .skillCard:hover:nth-child(2n) {
+}
+
+.middleCard {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    display:block;
+    border: solid black;
+    transform: translate(-50%, -50%);
 }
 
 #skillsbg {
@@ -704,4 +705,50 @@ input[type=submit]:hover {
     mix-blend-mode:hard-light;
     // border: 2px solid grey;
     // border-radius: 2px;
+}
+
+.experienceContainer {
+    margin-top: 5%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 24% 24% auto 24% 24%;
+}
+
+.experience {
+    grid-column: 2/3;
+}
+
+.experience:nth-child(even) {
+    grid-column: 4/5;
+    text-align: right;
+}
+
+
+.experienceTitle{
+    font-size: 36px;
+    font-family: futura-pt, sans-serif;
+    padding-right: 5%;
+    padding-left: 3%;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+    font-style: normal;
+    margin-left: 1.5%;
+}
+
+.experienceDate{
+    font-size: 18px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+}
+
+.cubegif {
+    width: 65px;
+    transition: ease-in-out 300ms;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cubegif:hover {
+    width: 90px;
 }

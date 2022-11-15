@@ -399,6 +399,10 @@ hr {
   transition: grid-column 2s ease;
 }
 
+.skillCard:nth-child(2n) {
+  grid-column: 4;
+}
+
 .middleCard {
   position: absolute;
   top: 65%;
@@ -406,10 +410,6 @@ hr {
   display: block;
   border: solid black;
   transform: translate(-50%, -50%);
-}
-
-.skillCard:nth-child(2n) {
-  grid-column: 4;
 }
 
 #skillsbg {
@@ -497,20 +497,13 @@ strong {
 }
 
 input, select, textarea {
-  width: 100%;
-  /* Full width */
-  padding: 12px;
-  /* Some padding */
-  border: 1px solid #ccc;
-  /* Gray border */
-  border-radius: 4px;
-  /* Rounded borders */
-  box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
-  margin-top: 6px;
-  /* Add a top margin */
-  margin-bottom: 16px;
-  /* Bottom margin */
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
   resize: vertical;
 }
 
@@ -571,6 +564,51 @@ input[type=submit]:hover {
   max-width: 20%;
   opacity: 100%;
   mix-blend-mode: hard-light;
+}
+
+.experienceContainer {
+  margin-top: 5%;
+  margin-left: 5%;
+  display: grid;
+  grid-template-columns: 24% 24% auto 24% 24%;
+}
+
+.experience {
+  grid-column: 2/3;
+}
+
+.experience:nth-child(even) {
+  grid-column: 4/5;
+  text-align: right;
+}
+
+.experienceTitle {
+  font-size: 36px;
+  font-family: futura-pt, sans-serif;
+  padding-right: 5%;
+  padding-left: 3%;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+  margin-left: 1.5%;
+}
+
+.experienceDate {
+  font-size: 18px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+}
+
+.cubegif {
+  width: 65px;
+  transition: ease-in-out 300ms;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cubegif:hover {
+  width: 90px;
 }
 
 /*# sourceMappingURL=index.css.map */

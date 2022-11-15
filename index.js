@@ -19,6 +19,9 @@ let summoner = {
     "winrate": ''
 }
 
+console.log("ici")
+console.log(summoner)
+console.log("ici")
 const transporter = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com',
     port: 587,

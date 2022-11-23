@@ -96,33 +96,35 @@ app.get('/contact', function(req, res) {
     res.render('contact.pug', { randomVar: 'random value' });
 });
 
-app.post('/contact', function(req, res) {
-    let form = new multiparty.Form();
-    let data = {};
-    form.parse(req, function (err, fields) {
-        // console.log(fields);
-        Object.keys(fields).forEach(function (property) {
-            data[property] = fields[property].toString();
-        });
+// Honestly who is going to use a contact form ???
 
-        const mail = {
-            from: process.env.EMAIL,
-            to: process.env.EMAIL,
-            subject: data.subject,
-            text: `${data.name} <${data.email}> \n${data.formContent}`,
-        };
-        //3.
-        transporter.sendMail(mail, (err, data) => {
-        if (err) {
-            console.log(err);
-            res.status(500).send("Something went wrong.");
-        } else {
-            console.log('here');
-            res.status(200).send("Email successfully sent to recipient!");
-        }
-        });
-    });
-})
+// app.post('/contact', function(req, res) {
+//     let form = new multiparty.Form();
+//     let data = {};
+//     form.parse(req, function (err, fields) {
+//         // console.log(fields);
+//         Object.keys(fields).forEach(function (property) {
+//             data[property] = fields[property].toString();
+//         });
+
+//         const mail = {
+//             from: process.env.EMAIL,
+//             to: process.env.EMAIL,
+//             subject: data.subject,
+//             text: `${data.name} <${data.email}> \n${data.formContent}`,
+//         };
+//         //3.
+//         transporter.sendMail(mail, (err, data) => {
+//         if (err) {
+//             console.log(err);
+//             res.status(500).send("Something went wrong.");
+//         } else {
+//             console.log('here');
+//             res.status(200).send("Email successfully sent to recipient!");
+//         }
+//         });
+//     });
+// })
 
 app.get('*', function(req, res){
     res.status(404).send('Use real route pls no break website i work hard for this :(');

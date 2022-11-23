@@ -2,23 +2,8 @@ extends ./layout.pug
 
 block content
     script(type='module' src='js/sendMail.js')
-    .formContainer 
-        form(action='POST')#contact-form
-            label(for='name') First and Last names
-            input#name(type='text' name='name' placeholder='Your name..')
-            label(for='email') Email 
-            input#email(type='email', name='email' placeholder='something@something.com')
-            label(for='subject') Subject
-            select#country(name='subject')
-                option(value='internship') Internship Offer
-                option(value='info') General information
-                option(value='league') Want to play League of Legends with me
-            label(for='subject') Content
-            textarea#subject(name='formContent' placeholder='Write something..' style='height:200px')
-            input(type='submit' value='Submit')
-
     .contactInfo
-        span You can also contact me directly on my 
+        span You can contact me directly on my 
         a(href="https://www.linkedin.com/in/matt%C3%A9o-bernardi-75b603181/").subtitleText Linkedin 
         span or just send me an 
         a(href="mailto:matteo.bernardi@epitech.eu").subtitleText e-mail !
